@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoViewController">
+            <connections>
+                <outlet property="cellPhoto" destination="3G3-Wc-YW1" id="8y7-nR-O26"/>
+                <outlet property="tablePhoto" destination="gHi-w9-aVI" id="Qnt-HX-6hS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewPhoto" destination="afV-wW-jQi" id="7BP-wg-4H4"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gHi-w9-aVI">
+                    <rect key="frame" x="0.0" y="30" width="375" height="637"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Spq-2I-Vsh"/>
+                        <outlet property="delegate" destination="-1" id="fo9-rR-3HA"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3MG-Zy-Nay">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="dismiss:" destination="-1" eventType="touchUpInside" id="SPg-m1-mdq"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="3MG-Zy-Nay" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2Xg-3b-7IV"/>
+                <constraint firstAttribute="trailing" secondItem="gHi-w9-aVI" secondAttribute="trailing" id="4Zt-hv-N88"/>
+                <constraint firstItem="3MG-Zy-Nay" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EhX-qe-jjT"/>
+                <constraint firstItem="gHi-w9-aVI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Pjq-r2-Y1Z"/>
+                <constraint firstItem="gHi-w9-aVI" firstAttribute="top" secondItem="3MG-Zy-Nay" secondAttribute="bottom" id="ZNx-z1-93e"/>
+                <constraint firstAttribute="bottom" secondItem="gHi-w9-aVI" secondAttribute="bottom" id="ZbD-c9-XZy"/>
+                <constraint firstAttribute="trailing" secondItem="3MG-Zy-Nay" secondAttribute="trailing" id="sgk-vc-2C7"/>
+                <constraint firstItem="gHi-w9-aVI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="y9I-ww-SoL"/>
+            </constraints>
+            <point key="canvasLocation" x="16.5" y="-31.5"/>
+        </view>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3G3-Wc-YW1">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3G3-Wc-YW1" id="WvC-5m-Pjo">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afV-wW-jQi">
+                        <rect key="frame" x="8" y="8" width="359" height="27"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="afV-wW-jQi" firstAttribute="bottom" secondItem="WvC-5m-Pjo" secondAttribute="bottomMargin" id="Maa-uJ-vKt"/>
+                    <constraint firstItem="afV-wW-jQi" firstAttribute="leading" secondItem="WvC-5m-Pjo" secondAttribute="leadingMargin" id="k8C-Nc-IFL"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="afV-wW-jQi" secondAttribute="trailing" id="m5S-qs-3b1"/>
+                    <constraint firstItem="afV-wW-jQi" firstAttribute="top" secondItem="WvC-5m-Pjo" secondAttribute="topMargin" id="qFq-ZT-MLY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="374.5" y="-194"/>
+        </tableViewCell>
+    </objects>
+</document>
